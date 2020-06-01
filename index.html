@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="author" content="Jonay Z. Castro Suárez"/>
+	<meta name="description" content="Conversor de multiples undidades de medida"/>
+	<link rel="stylesheet" href="./style.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Da+2|Roboto&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="scripts/generales.js"></script>
+	<script src="scripts/aceleracion.js"></script>
+	<script src="scripts/area.js"></script>
+	<script src="scripts/energia.js"></script>
+	<script src="scripts/trigonometricas.js"></script>
+	<!--
+	<script src="scripts/fuerza.js"></script>
+	<script src="scripts/longitud.js"></script>
+	<script src="scripts/masa.js"></script>
+	-->
+	<script src="scripts/numericos.js"></script>
+	<!--
+	<script src="scripts/potencia.js"></script>
+	<script src="scripts/presion.js"></script>
+	-->
+	<script src="scripts/velocidad.js"></script>
+	<!--
+	<script src="scripts/tiempo.js"></script>
+	<script src="scripts/volumen.js"></script>
+	-->
+	<title>Conversor de Unidades</title>
+</head>
+<body>
+	<a id="btn-top">
+		<i id="icon-top" class="fas fa-sort-up"></i>
+	</a>
+	<header>
+		<div id="container-text-header">
+			<h1 id="text-header">Conversor de unidades</h1>
+			<p id="text-version">Versi&oacute;n 1</p>
+		</div>
+		<div id="container-icon-header">
+			<a href="mailto:zeven8540@gmail.com" id="link-mail-header">
+				<i class="far fa-envelope" id="icon-mail-header" title="Enviar email al autor"></i>
+			</a>
+		</div>
+	</header>
+	<aside>
+		<h2 id="header-aside">Men&uacute;</h2>
+		<div id="container-btn-aside">
+			<a href="#container-aceleracion">
+				<button class="btn-aside" id="aceleracion">Aceleraci&oacute;n</button>
+			</a>
+			<a href="#container-area">
+				<button class="btn-aside" id="area">&Aacute;rea</button>
+			</a>
+			<!--
+			<a href="#container-almacenamiento">
+				<button class="btn-aside" id="almacenamiento">Almacenamiento Digital</button>
+			</a>
+			-->
+			<a href="#container-energia">
+				<button class="btn-aside" id="energia">Energ&iacute;a</button>
+			</a>
+			<!--
+			<a href="#container-fuerza">
+				<button class="btn-aside" id="fuerza">Fuerza</button>
+			</a>		
+			<a href="#container-combustible">
+				<button class="btn-aside" id="combustible">Consumo de Combustible</button>
+			</a>
+			
+			<a href="#container-longitud">
+				<button class="btn-aside" id="long">Longitud</button>
+			</a>
+			<a href="#container-masa">
+				<button class="btn-aside" id="masa">Masa</button>
+			</a>
+			-->
+			<a href="#container-numericos">
+				<button class="btn-aside" id="numericos">Sistemas Num&eacute;ricos</button>
+			</a>
+			<!--
+			<a href="#container-potencia">
+				<button class="btn-aside" id="potencia">Potencia</button>
+			</a>		
+			<a href="#container-presion">
+				<button class="btn-aside" id="presion">Presi&oacute;n</button>
+			</a>
+			-->
+			<a href="#container-velocidad">
+				<button class="btn-aside" id="velocidad">Velocidad</button>
+			</a>
+			<a href="#container-trigonometricas">
+				<button class="btn-aside" id="trigonometrica">Trigonometr&iacute;a Circunferencia</button>
+			</a>
+			<!--
+			<a href="#container-tiempo">
+				<button class="btn-aside" id="tiempo">Tiempo</button>
+			</a>
+			<a href="#container-volumen">
+				<button class="btn-aside" id="volumen">Volumen</button>
+			</a>
+			-->
+		</div>
+	</aside>
+	<main>
+		<!--aceleracion-->
+		<div id="container-aceleracion">
+			<h1 class="header-unidad">Aceleracion</h1>
+			<div class="container-unidad">
+				<label for="ms2" class="label-unidad">
+					Metros/Segundo cuadrado (m/s<sup class="sup-index">2</sup>)
+				</label>
+				<input type="number" name="ms2" id="ms2" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="ps2" class="label-unidad">
+					Pies/Segundo cuadrado (p/s<sup class="sup-index">2</sup>)
+				</label>
+				<input type="number" name="ps2" id="ps2" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="gravedad" class="label-unidad">
+					Gravedad Estandar (g)
+				</label>
+				<input type="number" name="gravedad" id="gravedad" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="gal" class="label-unidad">
+					Gal (cm/s<sup class="sup-index">2</sup>)
+				</label>
+				<input type="number" name="gal" id="gal" class="unidad">
+			</div>
+		</div>
+		<!--area-->
+		<div id="container-area">
+			<h1 class="header-unidad">&Aacute;rea</h1>
+			<div class="container-unidad">
+				<label for="km2" class="label-unidad">
+					Kil&oacute;metros cuadrados (km<sup class="sup-index">2</sup> )
+				</label>
+				<input type="number" name="km2" id="km2" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="hectareas" class="label-unidad">
+					Hect&aacute;reas (ha)
+				</label>
+				<input type="number" name="hectareas" id="hectareas" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="m2" class="label-unidad">
+					Metros cuadrados (m<sup class="sup-index">2</sup>)
+				</label>
+				<input type="number" name="m2" id="m2" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="cm2" class="label-unidad">
+					Cent&iacute;metros cuadrados (cm<sup class="sup-index">2</sup>)
+				</label>
+				<input type="number" name="cm2" id="cm2" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="mm2" class="label-unidad">
+					Mil&iacute;metros cuadrados (mm<sup class="sup-index">2</sup>)
+				</label>
+				<input type="number" name="mm2" id="mm2" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="mi2" class="label-unidad">
+					Millas cuadradas (mi<sup class="sup-index">2</sup>)
+				</label>
+				<input type="number" name="mi2" id="mi2" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="acres" class="label-unidad">
+					Acres 
+				</label>
+				<input type="number" name="acres" id="acres" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="yd2" class="label-unidad">
+					Yardas cuadradas (yd<sup class="sup-index">2</sup>)
+				</label>
+				<input type="number" name="yd2" id="yd2" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="ft2" class="label-unidad">
+					Pies cuadrados (ft<sup class="sup-index">2</sup>)
+				</label>
+				<input type="number" name="ft2" id="ft2" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="in2" class="label-unidad">
+					Pulgadas cuadradas (in<sup class="sup-index">2</sup>)
+				</label>
+				<input type="number" name="in2" id="in2" class="unidad">
+			</div>
+		</div>
+		<!--energia-->
+		<div id="container-energia">
+			<h1 class="header-unidad">Energ&iacute;a</h1>
+			<!--
+			<div class="container-unidad">
+				<label for="MJ" class="label-unidad">
+					Mega Julio (MJ)
+				</label>
+				<input type="text" name="MJ" id="MJ" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="kJ" class="label-unidad">
+					Kilojulios (kJ)
+				</label>
+				<input type="text" name="kJ" id="kJ" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="J" class="label-unidad">
+					Julios (J)
+				</label>
+				<input type="text" name="J" id="J" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="ergios" class="label-unidad">
+					Ergios
+				</label>
+			<input type="text" name="ergios" id="ergios" class="unidad">
+			</div>
+			-->
+			<div class="container-unidad">
+				<label for="eV" class="label-unidad">
+					Electr&oacute;n Voltio (eV)
+				</label>
+			<input type="number" name="eV" id="eV" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="kcal" class="label-unidad">
+					Kilocalor&iacuteas (kcal)
+				</label>
+			<input type="number" name="kcal" id="kcal" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="cal" class="label-unidad">
+					Calor&iacute;as (cal)
+				</label>
+			<input type="number" name="cal" id="cal" class="unidad">
+			</div>
+			<!--
+			<div class="container-unidad">
+				<label for="ftLbf" class="label-unidad">
+					Pies-Libra (ft-lbf)
+				</label>
+			<input type="text" name="ftLbf" id="ftLbf" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="inLbf" class="label-unidad">
+					Pulgadas-Libra (in-lbf)
+				</label>
+			<input type="text" name="inLbf" id="inLbf" class="unidad">
+			</div>
+			-->
+			<div class="container-unidad">
+				<label for="kWh" class="label-unidad">
+					Kilowatios-Hora (kWh)
+				</label>
+			<input type="number" name="kWh" id="kWh" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="Wh" class="label-unidad">
+					Watios-Hora (Wh)
+				</label>
+			<input type="number" name="Wh" id="Wh" class="unidad">
+			</div>
+			<!--
+			<div class="container-unidad">
+				<label for="btu" class="label-unidad">
+					Unidades Termal Brit&aacute;nicas (btu)
+				</label>
+			<input type="text" name="btu" id="btu" class="unidad">
+			</div>
+			-->
+		</div>
+		<!--numericos-->
+		<div id="container-numericos">
+			<h1 class="header-unidad">Sistemas Num&eacute;ricos</h1>
+			<div class="container-unidad">
+				<label for="decimal" class="label-unidad">
+					Decimal
+				</label>
+				<input type="number" name="decimal" id="decimal" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="binario" class="label-unidad">
+					Binario (Solo valores 0 y 1)
+				</label>
+				<input type="number" name="binario" id="binario" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="octal" class="label-unidad">
+					Octal (Solo valores entre 0 y 7)
+				</label>
+				<input type="number" name="octal" id="octal" class="unidad" >
+			</div>
+			<div class="container-unidad">
+				<label for="hex" class="label-unidad">
+					Hexadecimal (Solo valores de 0 a 9 y de A a F)
+				</label>
+				<input type="text" name="hex" id="hex" class="unidad">
+			</div>
+		</div>
+		<!--velocidad-->
+		<div id="container-velocidad">
+			<h1 class="header-unidad">Velocidad</h1>
+			<div class="container-unidad">
+				<label for="kmh" class="label-unidad">
+					Kilometros por Hora (Km/h)
+				</label>
+				<input type="number" name="kmh" id="kmh" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="ms" class="label-unidad">
+					Metros por Segundo (m/s)
+				</label>
+				<input type="number" name="ms" id="ms" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="nudos" class="label-unidad">
+					Nudos
+				</label>
+				<input type="number" name="nudos" id="nudos" class="unidad">
+			</div>
+		</div>
+		<!--trigonometricas-->
+		<div id="container-trigonometricas">
+			<h1 class="header-unidad">Trigonometr&iacute;a(Circunferencia)</h1>
+			<div class="container-unidad">
+				<label for="diametro" class="label-unidad">
+					Diametro
+				</label>
+				<input type="number" name="diametro" id="diametro" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="radio" class="label-unidad">
+					Radio
+				</label>
+				<input type="number" name="radio" id="radio" class="unidad">
+			</div>
+			<div class="container-unidad">
+				<label for="circunferencia" class="label-unidad">
+					Circunferencia
+				</label>
+				<input type="number" name="circunferencia" id="circunferencia" class="unidad">
+			</div>
+		</div>
+	</main>
+</body>
+</html>
